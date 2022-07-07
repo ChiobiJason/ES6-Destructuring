@@ -5,10 +5,17 @@ import cars from "./practice";
 
 // console.log(cars);
 const [honda, tesla] = cars;
-const teslaTopColour = tesla.coloursByPopularity[0];
-const teslaTopSpeed = tesla.speedStats.topSpeed;
-const hondaTopColour = honda.coloursByPopularity[0];
-const hondaTopSpeed = honda.speedStats.topSpeed;
+// const teslaTopColour = tesla.coloursByPopularity[0];
+// const teslaTopSpeed = tesla.speedStats.topSpeed;
+// const hondaTopColour = honda.coloursByPopularity[0];
+// const hondaTopSpeed = honda.speedStats.topSpeed;
+
+console.log(tesla);
+
+const { speedStats: {topSpeed: teslaTopSpeed} } = tesla;
+const  { coloursByPopularity: [teslaTopColour] } = tesla;
+const { speedStats: {topSpeed: hondaTopSpeed} } = honda;
+const  { coloursByPopularity: [hondaTopColour] } = honda;
 
 ReactDOM.render(
   <table>
